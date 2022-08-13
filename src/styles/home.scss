@@ -40,6 +40,22 @@ nav {
   display: inline-block;
   width: 100vw;
   height: 85px;
+  text-align: right;
+  position: absolute;
+  right: 0px;
+  & span {
+    display: inline-block;
+    position: relative;
+    top: 42.5px;
+    right: 42.5px;
+    transform: translateY(-50%);
+    & a {
+      text-decoration: none;
+    }
+    &:first-child {
+      right: 85px;
+    }
+  }
 }
 
 h1 {
@@ -47,10 +63,13 @@ h1 {
   margin: 10px;
 }
 
-.smol {
+.smol, .really-smol {
   font-size: 3vw;
   position: relative;
   left: 100px;
+  &.really-smol {
+    font-size: 1.5vw;
+  }
 }
 
 .reveal {
