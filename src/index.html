@@ -5,7 +5,11 @@
     <title>tinymedia</title>
     <meta name="description" content="tinymedia is a nice, simple social media app">
     <link rel="stylesheet" href="styles/home.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="scripts/home.js"></script>
+    <script src="scripts/global.js"></script>
   </head>
   <body>
     <nav>
@@ -13,16 +17,19 @@
       <span class="login"><a href="login">log in</a></span>
       <span class="register"><a href="register">sign up</a></span>
     </nav>
-    <div class="screen one">
-      <p class="smol">introducing...</p>
-      <h1 class="big-boi">tinymedia</h1>
-    </div>
-    <div class="screen two">
-      <h1>our #1 rule: <span class="big-boi">don't be toxic.</span></h1>
-    </div>
-    <div class="screen three">
-      <h1 class="big-boi">get started now!</h1>
-      <a href="register" class="big-register">sign up</a>
+    <div class="screens">
+      <div class="reveal screen one active">
+        <p class="smol">introducing...</p>
+        <h1 class="big-boi">tinymedia</h1>
+        <div class="preview">[ preview image goes here ]</div>
+      </div>
+      <div class="reveal screen two">
+        <p class="smol">our #1 rule: </p><h1>don't be toxic.</h1>
+      </div>
+      <div class="reveal screen three">
+        <h1 class="big-boi">get started</h1>
+        <a href="register" class="big-register">sign up now!</a>
+      </div>
     </div>
   </body>
 </html>

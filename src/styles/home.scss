@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.screens {
+  position: absolute;
+  top: 85px;
+}
+
+.screen {
+  padding: 100px;
+  display: inline-block;
+  width: 100vw;
+  height: vh(100);
+  &:first-child {
+    /* 85px being the height of the navbar */
+    height: calc(vh(100) - 85px);
+  }
+  & .preview {
+    position: absolute;
+    top: 10%;
+    height: calc(80% - 85px);
+    left: 30%;
+    width: 50%;
+    border-radius: 15px;
+    background-color: lightgray;
+    z-index: -1;
+    /* remove later */
+    padding: 40px;
+    /* */
+  }
+}
+
+nav {
+  display: inline-block;
+  width: 100vw;
+  height: 85px;
+}
+
+h1 {
+  font-size: 8vw;
+  margin: 10px;
+}
+
+p.smol {
+  font-size: 3vw;
+  position: relative;
+  left: 100px;
+}
+
+.reveal {
+  position: relative;
+  top: 300px;
+  transition: 1.5s;
+  transition-property: opacity top;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    top: 0px;
+  }
+}

@@ -1,0 +1,14 @@
+@function vh($amount) {
+  @return calc(var(--vh, 1vh) * #{$amount});
+}
+
+html, body {
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: Rubik, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
