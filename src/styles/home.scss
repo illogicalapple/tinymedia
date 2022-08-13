@@ -27,6 +27,13 @@
     padding: 40px;
     /* */
   }
+  &.two {
+    text-align: right;
+    & .smol {
+      left: unset;
+      right: 100px;
+    }
+  }
 }
 
 nav {
@@ -40,7 +47,7 @@ h1 {
   margin: 10px;
 }
 
-p.smol {
+.smol {
   font-size: 3vw;
   position: relative;
   left: 100px;
@@ -55,5 +62,22 @@ p.smol {
   &.active {
     opacity: 1;
     top: 0px;
+  }
+}
+
+.big-register {
+  font-weight: 0;
+  color: black;
+}
+
+.down {
+  pointer-events: none;
+  font-size: 4vw;
+  position: absolute;
+  top: calc(vh(100) - (6vw + 85px));
+  right: 2vw;
+  transition: 0.3s opacity;
+  &.nope {
+    opacity: 0;
   }
 }
