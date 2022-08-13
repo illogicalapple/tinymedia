@@ -1,9 +1,10 @@
 @use "global" as *;
 
-body {
+html, body {
+  scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  &::webkit-scrollbar {
+  &::-webkit-scrollbar {
     display: none;
   }
 }
@@ -24,6 +25,7 @@ body {
   width: 100vw;
   height: vh(100);
   & .preview {
+    text-align: left;
     position: absolute;
     top: 50%;
     height: calc(80% - 85px);
@@ -42,6 +44,10 @@ body {
     & .smol {
       left: unset;
       right: 100px;
+    }
+    & .preview {
+      left: unset;
+      right: 30%
     }
   }
 }
