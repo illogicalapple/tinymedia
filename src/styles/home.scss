@@ -25,10 +25,11 @@ body {
   height: vh(100);
   & .preview {
     position: absolute;
-    top: 10%;
+    top: 50%;
     height: calc(80% - 85px);
     left: 30%;
     width: 50%;
+    transform: translateY(-50%);
     border-radius: 15px;
     background-color: lightgray;
     z-index: -1;
@@ -72,16 +73,16 @@ nav {
 }
 
 h1 {
-  font-size: 150px;
+  font-size: vh(16);
   margin: 10px;
 }
 
 .smol, .really-smol {
-  font-size: 60px;
+  font-size: vh(6);
   position: relative;
   left: 100px;
   &.really-smol {
-    font-size: 1.5vw;
+    font-size: vh(3.5);
   }
 }
 
