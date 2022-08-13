@@ -1,8 +1,21 @@
 @use "global" as *;
 
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::webkit-scrollbar {
+    display: none;
+  }
+}
+
 .screens {
   position: absolute;
-  top: 85px;
+  top: 0px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::webkit-scrollbar {
+    display: none;
+  }
 }
 
 .screen {
@@ -10,10 +23,6 @@
   display: inline-block;
   width: 100vw;
   height: vh(100);
-  &:first-child {
-    /* 85px being the height of the navbar */
-    height: calc(vh(100) - 85px);
-  }
   & .preview {
     position: absolute;
     top: 10%;
@@ -37,34 +46,38 @@
 }
 
 nav {
-  display: inline-block;
-  width: 100vw;
   height: 85px;
   text-align: right;
-  position: absolute;
-  right: 0px;
-  & span {
+  & a {
+    z-index: 2;
     display: inline-block;
     position: relative;
     top: 42.5px;
     right: 42.5px;
     transform: translateY(-50%);
-    & a {
-      text-decoration: none;
-    }
-    &:first-child {
+    text-decoration: none;
+    color: black;
+    &.login {
+      /* margin */
       right: 85px;
+    }
+    &.register {
+      color: white;
+      background-color: $colors-main;
+      padding: 10px;
+      border-radius: 5px;
+      top: 52.5px;
     }
   }
 }
 
 h1 {
-  font-size: 8vw;
+  font-size: 150px;
   margin: 10px;
 }
 
 .smol, .really-smol {
-  font-size: 3vw;
+  font-size: 60px;
   position: relative;
   left: 100px;
   &.really-smol {
@@ -76,7 +89,7 @@ h1 {
   position: relative;
   top: 300px;
   transition: 1.5s;
-  transition-property: opacity top;
+  transition-property: top, opacity;
   opacity: 0;
   &.active {
     opacity: 1;
@@ -93,8 +106,8 @@ h1 {
   pointer-events: none;
   font-size: 4vw;
   position: absolute;
-  top: calc(vh(100) - (6vw + 85px));
-  right: 2vw;
+  top: calc(vh(100) - 6vw);
+  right: 40px;
   transition: 0.3s opacity;
   &.nope {
     opacity: 0;
