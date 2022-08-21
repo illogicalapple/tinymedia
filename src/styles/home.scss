@@ -74,6 +74,10 @@ nav {
       padding: 10px;
       border-radius: 5px;
       top: 52.5px;
+      & span {
+        color: white;
+        background-color: $colors-main;
+      }
     }
   }
 }
