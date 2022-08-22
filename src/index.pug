@@ -1,31 +1,19 @@
 doctype html
-html(lang='en')
+html(lang="en")
   head
-    meta(charset='utf-8')
+    include /includes/head
     title tinymedia
-    meta(name='description', content='tinymedia is a nice, simple social media site')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='styles/home.scss')
-    link(rel='preconnect', href='https://fonts.googleapis.com')
-    link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
-    // defer boom
-    link(href='https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap', rel='preload', as='style', onload="this.onload=null;this.rel='stylesheet'")
-    noscript
-      link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap')
-    // 
-    script(src='scripts/home.js')
-    script(src='scripts/global.js')
+    meta(name="description", content="tinymedia is a nice, simple social media site")
   body
     nav
-      a.login(href='login')
+      a.login(href="login")
         span log in
-      a.register(href='register')
+      a.register(href="register")
         span sign up
     .screens
       .reveal.screen.one.active
         p.smol introducing...
         h1.big-boi tinymedia
-        |  
         br
         p.really-smol a nice, simple social media site
         .preview [ preview image goes here ]
@@ -33,11 +21,11 @@ html(lang='en')
       .reveal.screen.two
         .preview [ another preview goes here ]
         p.smol our #1 rule: 
-        h1 don&apos;t be toxic.
+        h1 don't be toxic.
       .reveal.screen.three
         p.smol &nbsp;
         h1.big-boi get started
         // big register except smol
         br
-        a.big-register.smol(href='register') sign up now!
+        a.big-register.smol(href="register") sign up now!
         .preview [ the last preview goes here ]
